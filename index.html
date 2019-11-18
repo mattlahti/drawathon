@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            html, body {
+                height: 99%;
+                width: 99%;
+                margin: 0;
+                padding: 0;
+                background-color: #a5e7e7;
+            }
+            #canvas-wrapper {
+                /* border-style: solid; */
+                border-radius: 50px;
+                width: 50%;
+                height: 85vh;
+                float: left;
+                padding-right: 14%;
+                margin-left: 2vh;
+                background-color: whitesmoke;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+            }
+
+            #word-being-guessed
+            {
+                /* border-style: solid; */
+                height: 50px;
+                width: 64%;
+                float:top;
+                float:left;
+                margin-bottom: 10px;
+                border-radius: 50px;
+                margin-left: 2vh;
+                margin-top: 1vh;
+            }
+            #wrapper-chat
+            {
+                /* border-style: solid; */
+                border-radius: 50px;
+                width: 19%;
+                height: 60vh;
+                float:right;
+                float:center;
+                padding-right: 14%;
+                background-color: whitesmoke;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+                
+            }
+            #wrapper-ranking
+            {
+                /* border-style: solid; */
+                border-radius: 50px;
+                width: 19%;
+                height: 23.5vh;
+                float:right;
+                float:bottom;
+                padding-right: 14%;
+                margin-top: 10px;
+                background-color: whitesmoke;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                
+            }
+
+            #theme-button
+            {
+                float: right;
+                border-radius: 50%;
+                background-color: rgb(32, 149, 178);
+                width: 50px;
+                height: 50px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                font-size: 25px;
+                margin-top: 1vh;
+            }
+            #theme-button:hover{
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 14px 14px rgba(0,0,0,0.22);
+                /* transform: scale(1.05); */
+            }
+            #help-button{
+                float: right;
+                border-radius: 50%;
+                background-color: rgb(32, 149, 178);
+                width: 50px;
+                height: 50px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                font-size: 25px;
+                margin-top: 1vh;
+            }
+            #help-button:hover{
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 14px 14px rgba(0,0,0,0.22);
+            }
+            #wrapper-top{
+                border-style: solid;
+                height: 10hv;
+                width: 40%;
+                float: top;
+                float: right;
+                margin-bottom: 10px;
+                border-radius: 50px;
+                margin-left: 2vh;
+                margin-top: 1vh;
+            }
+
+            #chat-input {
+                float: right;
+                float: center;
+                border-radius: 10px;
+            }
+        </style>
+
+        <title>Drawathon</title>
+        <meta charset="UTF-8">
+		<script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="word-being-guessed"></div>
+        <div id="round-timer"></div>
+
+        <button id="help-button">?</button>
+        <button id="theme-button">&#9790</button>
+        <div id="canvas-wrapper"></div>
+        <div id="word-list"></div>
+        <div id="wrapper-side"> 
+            <div id="wrapper-chat">
+                <input type="text" id="chat-input"/> 
+            </div>
+            <div id="wrapper-ranking"></div>
+        </div> 
+            <button id="play-button">Play!</button>
+        <script src="drawing.js"> </script>
+    </body>
+</html>
+
